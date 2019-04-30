@@ -82,6 +82,23 @@ public class Coords {
 		}
 	}
 	
+	public void getCenter() {
+		double xCenter = 0;
+		double yCenter = 0;
+		for (int i = 0; i < numList.size(); i++) {
+			if (i % 2 == 0) {
+			xCenter += numList.get(i);
+			}
+			if (i % 2 != 0) {
+				yCenter += numList.get(i);
+			}
+		}
+		xCenter /= (numList.size() / 2);
+		yCenter /= (numList.size() / 2);
+		System.out.println("\n" + xCenter + ", " + yCenter);
+		
+	}
+	
 	//Not working yet.
 	
 	/*public void resize(double percent) {
